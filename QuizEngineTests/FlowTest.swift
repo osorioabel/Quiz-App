@@ -66,6 +66,38 @@ class FlowTest: XCTestCase {
         XCTAssertEqual(router.routedQuestions, ["Q1"])
     }
 
+    func test_startWithNoQuestions_routesToResults() {
+        let sut = makeSUT(questions:[])
+        sut.start()
+
+        XCTAssertEqual(router.routedResults!, [:])
+    }
+
+    func test_startWithOneQuestions_doesNotRoutesToResults() {
+        makeSUT(questions:["Q1"]).start()
+
+        XCTAssertNil(router.routedResults)
+    }
+
+    func test_startAndAnwserFirstQuestion_WithTwoQuestions_doesNotRoutesToResults() {
+        let sut = makeSUT(questions:["Q1","Q2"])
+        sut.start()
+
+        router.answerCallback("A1")
+
+        XCTAssertNil(router.routedResults)
+    }
+
+    func test_startAndAnwserFirstAndSecondQuestion_WithTwoQuestions_routesToResults() {
+        let sut = makeSUT(questions:["Q1","Q2"])
+        sut.start()
+
+        router.answerCallback("A1")
+        router.answerCallback("A2")
+
+        XCTAssertEqual(router.routedResults!, ["Q1":"A1", "Q2":"A2"])
+    }
+
     // MARK: - Helpers
 
     func makeSUT(questions: [String]) -> Flow {
@@ -73,11 +105,16 @@ class FlowTest: XCTestCase {
     }
     class RouterSpy: Router {
         var routedQuestions: [String] = []
+        var routedResults: [String: String]? = nil
         var answerCallback: Router.AnswerCallback = { _ in }
 
         func routeTo(question: String, answerCallback: @escaping Router.AnswerCallback) {
             routedQuestions.append(question)
             self.answerCallback = answerCallback
+        }
+
+        func routeTo(result: [String: String]) {
+            routedResults = result
         }
     }
 }
