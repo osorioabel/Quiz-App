@@ -12,37 +12,46 @@ import XCTest
 class QuestionViewControllerTest: XCTestCase {
 
     func test_viewDidLoad_rendersQuestionHeaderLabelText() {
-        let sut = QuestionViewController(question: "Q1", options: [])
-
-        _ = sut.view
-        
-        XCTAssertEqual(sut.headerLabel.text, "Q1")
+        XCTAssertEqual(makeSUT(question: "Q1", options: []).headerLabel.text, "Q1")
     }
 
-    func test_viewDidLoad_withNoOptions_rendersZeroOptions() {
-        let sut = QuestionViewController(question: "Q1", options: [])
-
-        _ = sut.view
-
-        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
-    }
-
-    func test_viewDidLoad_withOneOptions_rendersOneOptions() {
-        let sut = QuestionViewController(question: "Q1", options: ["A1"])
-
-        _ = sut.view
-
-        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 1)
+    func test_viewDidLoad_rendersOptions() {
+        XCTAssertEqual(makeSUT(options: ["A1"]).tableView.numberOfRows(inSection: 0), 1)
+        XCTAssertEqual(makeSUT(options: ["A1","A2"]).tableView.numberOfRows(inSection: 0), 2)
+        XCTAssertEqual(makeSUT(options: ["A1","A2","A3"]).tableView.numberOfRows(inSection: 0), 3)
     }
 
     func test_viewDidLoad_withOneOptions_rendersOneOptionsText() {
-        let sut = QuestionViewController(question: "Q1", options: ["A1"])
+        XCTAssertEqual(makeSUT(options: ["A1"]).tableView.title(at: 0), "A1")
+        XCTAssertEqual(makeSUT(options: ["A1","A2"]).tableView.title(at: 1), "A2")
+        XCTAssertEqual(makeSUT(options: ["A1","A2","A3"]).tableView.title(at: 2), "A3")
+    }
 
+    func test_optionSelected_notifyDelegate() {
+        var receivedAnswer = ""
+        let sut = makeSUT(options: ["A1"]){
+            receivedAnswer = $0
+        }
+
+        sut.tableView.delegate?.tableView?(sut.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        XCTAssertEqual(receivedAnswer, "A1")
+    }
+
+    // MARK: - Helpers
+    func makeSUT(question: String = "", options: [String] = [], selection: @escaping (String) -> Void = { _ in }) -> QuestionViewController {
+        let sut = QuestionViewController(question:question, options: options, selection: selection)
         _ = sut.view
+        return sut
+    }
+}
 
-        let indexPath = IndexPath(row: 0, section: 0)
-        let cell = sut.tableView.dataSource?.tableView(sut.tableView, cellForRowAt: indexPath)
+private extension UITableView {
+    func cell(at row: Int) -> UITableViewCell? {
+        let cell = dataSource?.tableView(self, cellForRowAt: IndexPath(row: row, section: 0))
+        return cell
+    }
 
-        XCTAssertEqual(cell?.textLabel?.text, "A1")
+    func title(at row: Int) -> String? {
+        return cell(at: row)?.textLabel?.text
     }
 }

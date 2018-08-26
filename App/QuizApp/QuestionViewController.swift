@@ -16,12 +16,15 @@ class QuestionViewController: UIViewController {
     // MARK: - Properties
     private var question: String = ""
     private var options: [String] = []
+    private var selection: ((String) -> Void)? = nil
+    private let reuseIdentifier = "Cell"
 
     // MARK: - Life cycle
-    convenience init(question: String, options: [String]) {
+    convenience init(question: String, options: [String], selection: @escaping (String) -> Void) {
         self.init()
         self.question = question
         self.options = options
+        self.selection = selection
     }
 
     // MARK: - View Life Cycle
@@ -38,8 +41,21 @@ extension QuestionViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = dequeueCell(in: tableView)
         cell.textLabel?.text = options[indexPath.row]
         return cell
+    }
+
+    private func dequeueCell(in tableView: UITableView) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) {
+            return cell
+        }
+        return UITableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
+    }
+}
+
+extension QuestionViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selection?(options[indexPath.row])
     }
 }
