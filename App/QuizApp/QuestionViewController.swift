@@ -16,11 +16,11 @@ class QuestionViewController: UIViewController {
     // MARK: - Properties
     private var question: String = ""
     private var options: [String] = []
-    private var selection: ((String) -> Void)? = nil
+    private var selection: (([String]) -> Void)? = nil
     private let reuseIdentifier = "Cell"
 
     // MARK: - Life cycle
-    convenience init(question: String, options: [String], selection: @escaping (String) -> Void) {
+    convenience init(question: String, options: [String], selection: @escaping ([String]) -> Void) {
         self.init()
         self.question = question
         self.options = options
@@ -56,6 +56,17 @@ extension QuestionViewController: UITableViewDataSource {
 
 extension QuestionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selection?(options[indexPath.row])
+        selection?(selectedOptions(in: tableView))
+    }
+
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if tableView.allowsMultipleSelection {
+            selection?(selectedOptions(in: tableView))
+        }
+    }
+
+    private func selectedOptions(in tableView: UITableView) -> [String] {
+        guard let indexPathsForSelectedRows = tableView.indexPathsForSelectedRows  else { return []}
+        return indexPathsForSelectedRows.map { options[$0.row]}
     }
 }
