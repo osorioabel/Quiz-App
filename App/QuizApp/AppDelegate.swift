@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let viewController = QuestionViewController(question: "abc", options: ["a1", "a2"]) { print($0) }
         _ = viewController.view
-        viewController.tableView.allowsMultipleSelection = false
+        viewController.tableView.allowsMultipleSelection = true
         window.rootViewController = viewController
         self.window = window
         window.makeKeyAndVisible()

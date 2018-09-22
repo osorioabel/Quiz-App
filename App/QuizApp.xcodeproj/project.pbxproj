@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D163EC22156C7CA0055802C /* ResultsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D163EC12156C7CA0055802C /* ResultsViewControllerTest.swift */; };
+		0D163EC52156C8840055802C /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D163EC32156C8840055802C /* ResultsViewController.swift */; };
+		0D163EC62156C8840055802C /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D163EC42156C8840055802C /* ResultsViewController.xib */; };
+		0D163EC82156CE9E0055802C /* TableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D163EC72156CE9E0055802C /* TableViewHelpers.swift */; };
 		0D4CA9D32133127F00A29BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4CA9D22133127F00A29BF6 /* AppDelegate.swift */; };
 		0D4CA9DA2133127F00A29BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D4CA9D92133127F00A29BF6 /* Assets.xcassets */; };
 		0D4CA9DD2133127F00A29BF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4CA9DB2133127F00A29BF6 /* LaunchScreen.storyboard */; };
@@ -26,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D163EC12156C7CA0055802C /* ResultsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerTest.swift; sourceTree = "<group>"; };
+		0D163EC32156C8840055802C /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		0D163EC42156C8840055802C /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
+		0D163EC72156CE9E0055802C /* TableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelpers.swift; sourceTree = "<group>"; };
 		0D4CA9CF2133127E00A29BF6 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D4CA9D22133127F00A29BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D4CA9D92133127F00A29BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +91,8 @@
 				0D4CA9DE2133127F00A29BF6 /* Info.plist */,
 				0D4CA9F82133146800A29BF6 /* QuestionViewController.swift */,
 				0D4CA9F92133146800A29BF6 /* QuestionViewController.xib */,
+				0D163EC32156C8840055802C /* ResultsViewController.swift */,
+				0D163EC42156C8840055802C /* ResultsViewController.xib */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -92,6 +102,8 @@
 			children = (
 				0D4CA9E92133127F00A29BF6 /* Info.plist */,
 				0D4CA9F2213313C400A29BF6 /* QuestionViewControllerTest.swift */,
+				0D163EC12156C7CA0055802C /* ResultsViewControllerTest.swift */,
+				0D163EC72156CE9E0055802C /* TableViewHelpers.swift */,
 			);
 			path = QuizAppTests;
 			sourceTree = "<group>";
@@ -181,6 +193,7 @@
 				0D4CA9DD2133127F00A29BF6 /* LaunchScreen.storyboard in Resources */,
 				0D4CA9DA2133127F00A29BF6 /* Assets.xcassets in Resources */,
 				0D4CA9FB2133146800A29BF6 /* QuestionViewController.xib in Resources */,
+				0D163EC62156C8840055802C /* ResultsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +213,7 @@
 			files = (
 				0D4CA9FA2133146800A29BF6 /* QuestionViewController.swift in Sources */,
 				0D4CA9D32133127F00A29BF6 /* AppDelegate.swift in Sources */,
+				0D163EC52156C8840055802C /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +222,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D4CA9F3213313C400A29BF6 /* QuestionViewControllerTest.swift in Sources */,
+				0D163EC82156CE9E0055802C /* TableViewHelpers.swift in Sources */,
+				0D163EC22156C7CA0055802C /* ResultsViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
