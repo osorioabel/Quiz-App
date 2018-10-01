@@ -10,6 +10,14 @@
 		0D5C22292132E3880005FA34 /* QuizEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5C221F2132E3880005FA34 /* QuizEngine.framework */; };
 		0D5C223A2132E5970005FA34 /* FlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C22392132E5970005FA34 /* FlowTest.swift */; };
 		0D5C223C2132E6370005FA34 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C223B2132E6370005FA34 /* Flow.swift */; };
+		0DDA3C4F2162C3B8006F3014 /* QuizEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDA3C462162C3B8006F3014 /* QuizEngine.framework */; };
+		0DDA3C5D2162C428006F3014 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C223B2132E6370005FA34 /* Flow.swift */; };
+		0DDA3C5E2162C428006F3014 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF0ECFF2158042F00C42B3E /* Router.swift */; };
+		0DDA3C5F2162C428006F3014 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF0ED0121580DD800C42B3E /* Result.swift */; };
+		0DDA3C602162C428006F3014 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF0ED0521580EE700C42B3E /* Game.swift */; };
+		0DDA3C612162C42E006F3014 /* FlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C22392132E5970005FA34 /* FlowTest.swift */; };
+		0DDA3C622162C42E006F3014 /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF0ED0321580E1300C42B3E /* GameTest.swift */; };
+		0DDA3C632162C42E006F3014 /* RouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF0ED0721580FE600C42B3E /* RouterSpy.swift */; };
 		0DF0ED002158042F00C42B3E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF0ECFF2158042F00C42B3E /* Router.swift */; };
 		0DF0ED0221580DD800C42B3E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF0ED0121580DD800C42B3E /* Result.swift */; };
 		0DF0ED0421580E1300C42B3E /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF0ED0321580E1300C42B3E /* GameTest.swift */; };
@@ -25,6 +33,13 @@
 			remoteGlobalIDString = 0D5C221E2132E3880005FA34;
 			remoteInfo = QuizEngine;
 		};
+		0DDA3C502162C3B8006F3014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D5C22162132E3880005FA34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DDA3C452162C3B8006F3014;
+			remoteInfo = QuizEngine_iOS;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +49,8 @@
 		0D5C222F2132E3880005FA34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D5C22392132E5970005FA34 /* FlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTest.swift; sourceTree = "<group>"; };
 		0D5C223B2132E6370005FA34 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		0DDA3C462162C3B8006F3014 /* QuizEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuizEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DDA3C4E2162C3B8006F3014 /* QuizEngine_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizEngine_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF0ECFF2158042F00C42B3E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0DF0ED0121580DD800C42B3E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		0DF0ED0321580E1300C42B3E /* GameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTest.swift; sourceTree = "<group>"; };
@@ -57,6 +74,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0DDA3C422162C3B8006F3014 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDA3C4B2162C3B8006F3014 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDA3C4F2162C3B8006F3014 /* QuizEngine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,6 +106,8 @@
 			children = (
 				0D5C221F2132E3880005FA34 /* QuizEngine.framework */,
 				0D5C22282132E3880005FA34 /* QuizEngineTests.xctest */,
+				0DDA3C462162C3B8006F3014 /* QuizEngine.framework */,
+				0DDA3C4E2162C3B8006F3014 /* QuizEngine_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +139,13 @@
 
 /* Begin PBXHeadersBuildPhase section */
 		0D5C221C2132E3880005FA34 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDA3C432162C3B8006F3014 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -150,6 +191,42 @@
 			productReference = 0D5C22282132E3880005FA34 /* QuizEngineTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		0DDA3C452162C3B8006F3014 /* QuizEngine_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DDA3C572162C3B8006F3014 /* Build configuration list for PBXNativeTarget "QuizEngine_iOS" */;
+			buildPhases = (
+				0DDA3C412162C3B8006F3014 /* Sources */,
+				0DDA3C422162C3B8006F3014 /* Frameworks */,
+				0DDA3C432162C3B8006F3014 /* Headers */,
+				0DDA3C442162C3B8006F3014 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuizEngine_iOS;
+			productName = QuizEngine_iOS;
+			productReference = 0DDA3C462162C3B8006F3014 /* QuizEngine.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0DDA3C4D2162C3B8006F3014 /* QuizEngine_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DDA3C5A2162C3B8006F3014 /* Build configuration list for PBXNativeTarget "QuizEngine_iOSTests" */;
+			buildPhases = (
+				0DDA3C4A2162C3B8006F3014 /* Sources */,
+				0DDA3C4B2162C3B8006F3014 /* Frameworks */,
+				0DDA3C4C2162C3B8006F3014 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DDA3C512162C3B8006F3014 /* PBXTargetDependency */,
+			);
+			name = QuizEngine_iOSTests;
+			productName = QuizEngine_iOSTests;
+			productReference = 0DDA3C4E2162C3B8006F3014 /* QuizEngine_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,6 +245,12 @@
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
 					};
+					0DDA3C452162C3B8006F3014 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					0DDA3C4D2162C3B8006F3014 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 				};
 			};
 			buildConfigurationList = 0D5C22192132E3880005FA34 /* Build configuration list for PBXProject "QuizEngine" */;
@@ -184,6 +267,8 @@
 			targets = (
 				0D5C221E2132E3880005FA34 /* QuizEngine */,
 				0D5C22272132E3880005FA34 /* QuizEngineTests */,
+				0DDA3C452162C3B8006F3014 /* QuizEngine_iOS */,
+				0DDA3C4D2162C3B8006F3014 /* QuizEngine_iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -197,6 +282,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0D5C22262132E3880005FA34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDA3C442162C3B8006F3014 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDA3C4C2162C3B8006F3014 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -227,6 +326,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0DDA3C412162C3B8006F3014 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDA3C5F2162C428006F3014 /* Result.swift in Sources */,
+				0DDA3C5E2162C428006F3014 /* Router.swift in Sources */,
+				0DDA3C5D2162C428006F3014 /* Flow.swift in Sources */,
+				0DDA3C602162C428006F3014 /* Game.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDA3C4A2162C3B8006F3014 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDA3C612162C42E006F3014 /* FlowTest.swift in Sources */,
+				0DDA3C622162C42E006F3014 /* GameTest.swift in Sources */,
+				0DDA3C632162C42E006F3014 /* RouterSpy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -234,6 +354,11 @@
 			isa = PBXTargetDependency;
 			target = 0D5C221E2132E3880005FA34 /* QuizEngine */;
 			targetProxy = 0D5C222A2132E3880005FA34 /* PBXContainerItemProxy */;
+		};
+		0DDA3C512162C3B8006F3014 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DDA3C452162C3B8006F3014 /* QuizEngine_iOS */;
+			targetProxy = 0DDA3C502162C3B8006F3014 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -453,6 +578,106 @@
 			};
 			name = Release;
 		};
+		0DDA3C582162C3B8006F3014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = A545A9B7W5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = QuizEngine/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.osmobilelab.QuizEngine-iOS";
+				PRODUCT_NAME = QuizEngine;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0DDA3C592162C3B8006F3014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = A545A9B7W5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = QuizEngine/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.osmobilelab.QuizEngine-iOS";
+				PRODUCT_NAME = QuizEngine;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0DDA3C5B2162C3B8006F3014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A545A9B7W5;
+				INFOPLIST_FILE = QuizEngineTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.osmobilelab.QuizEngine-iOSTests";
+				PRODUCT_NAME = QuizEngine_Tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0DDA3C5C2162C3B8006F3014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A545A9B7W5;
+				INFOPLIST_FILE = QuizEngineTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.osmobilelab.QuizEngine-iOSTests";
+				PRODUCT_NAME = QuizEngine_Tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -479,6 +704,24 @@
 			buildConfigurations = (
 				0D5C22372132E3880005FA34 /* Debug */,
 				0D5C22382132E3880005FA34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DDA3C572162C3B8006F3014 /* Build configuration list for PBXNativeTarget "QuizEngine_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DDA3C582162C3B8006F3014 /* Debug */,
+				0DDA3C592162C3B8006F3014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DDA3C5A2162C3B8006F3014 /* Build configuration list for PBXNativeTarget "QuizEngine_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DDA3C5B2162C3B8006F3014 /* Debug */,
+				0DDA3C5C2162C3B8006F3014 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
