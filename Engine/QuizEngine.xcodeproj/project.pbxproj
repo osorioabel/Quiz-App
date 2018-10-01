@@ -50,7 +50,7 @@
 		0D5C22392132E5970005FA34 /* FlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTest.swift; sourceTree = "<group>"; };
 		0D5C223B2132E6370005FA34 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		0DDA3C462162C3B8006F3014 /* QuizEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuizEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DDA3C4E2162C3B8006F3014 /* QuizEngine_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizEngine_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DDA3C4E2162C3B8006F3014 /* QuizEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF0ECFF2158042F00C42B3E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0DF0ED0121580DD800C42B3E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		0DF0ED0321580E1300C42B3E /* GameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTest.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 				0D5C221F2132E3880005FA34 /* QuizEngine.framework */,
 				0D5C22282132E3880005FA34 /* QuizEngineTests.xctest */,
 				0DDA3C462162C3B8006F3014 /* QuizEngine.framework */,
-				0DDA3C4E2162C3B8006F3014 /* QuizEngine_Tests.xctest */,
+				0DDA3C4E2162C3B8006F3014 /* QuizEngineTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 			);
 			name = QuizEngine_iOSTests;
 			productName = QuizEngine_iOSTests;
-			productReference = 0DDA3C4E2162C3B8006F3014 /* QuizEngine_Tests.xctest */;
+			productReference = 0DDA3C4E2162C3B8006F3014 /* QuizEngineTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -648,7 +648,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.osmobilelab.QuizEngine-iOSTests";
-				PRODUCT_NAME = QuizEngine_Tests;
+				PRODUCT_NAME = QuizEngineTests;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -670,7 +670,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.osmobilelab.QuizEngine-iOSTests";
-				PRODUCT_NAME = QuizEngine_Tests;
+				PRODUCT_NAME = QuizEngineTests;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
