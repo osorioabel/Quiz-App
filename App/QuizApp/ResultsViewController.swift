@@ -28,7 +28,7 @@ class ResultsViewController: UIViewController {
         headerLabel.text = summary
         tableView.register(CorrectAnswerCell.self)
         tableView.register(WrongAnswerCell.self)
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
     }
 }
 
