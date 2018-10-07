@@ -10,14 +10,16 @@ import QuizEngine
 
 struct ResultPresenter {
     let result: Result<Question<String>,[String]>
+    let questions: [Question<String>]
     let correctAnswers: Dictionary<Question<String>, [String]>
+
     var summary: String {
         return "You got \(result.score)/\(result.answers.count) correct"
     }
 
     var presentableAnswer: [PresentableAnswer] {
-        return result.answers.map { (question, userAnswer) in
-            guard let correctAnswer = correctAnswers[question] else {
+        return questions.map { question in
+            guard let userAnswer = result.answers[question], let correctAnswer = correctAnswers[question] else {
                 fatalError("Couldn't find correct answer to question \(question)")
             }
 
