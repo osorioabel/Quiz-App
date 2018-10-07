@@ -6,12 +6,11 @@
 //  Copyright © 2018 OS Mobile Lab. All rights reserved.
 //
 
-import QuizEngine
+@testable import QuizEngine
 
 extension Result: Hashable {
-    init(answers: [Question: Answer], score: Int) {
-        self.answers = answers
-        self.score = score
+    static func make(answers: [Question: Answer] = [:], score: Int = 0) -> Result {
+        return Result(answers: answers, score: score)
     }
 
     public var hashValue: Int {

@@ -98,10 +98,10 @@ class NavigationControllerTests: XCTestCase {
 
     func test_routesToResults_showResultsViewController() {
         let viewController = UIViewController()
-        let result = Result(answers: [singleAnswerQuestion: ["A1"]], score: 10)
+        let result = Result.make(answers: [singleAnswerQuestion: ["A1"]], score: 10)
 
         let secondViewController = UIViewController()
-        let secondResult = Result(answers: [singleAnswerQuestion: ["A2"]], score: 20)
+        let secondResult = Result.make(answers: [singleAnswerQuestion: ["A2"]], score: 20)
 
         factory.stub(result: result, with: viewController)
         factory.stub(result: secondResult, with: secondViewController)
