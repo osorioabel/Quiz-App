@@ -13,7 +13,7 @@ class QuestionTest: XCTestCase {
     func test_hasValue_withSameWrappedValue_isDifferentForSimpleAndMultipleValue() {
         let aValue = UUID()
         XCTAssertNotEqual(Question.singleAnswer(aValue).hashValue,
-                          Question.multipleAnswer(aValue).hashValue)
+                          Question.multipleAnswer (aValue).hashValue)
     }
 
     func test_hasValue_singleAnswer() {
