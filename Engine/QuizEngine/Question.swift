@@ -11,13 +11,4 @@ import Foundation
 public enum Question<T: Hashable> : Hashable {
     case singleAnswer(T)
     case multipleAnswer(T)
-
-    public var hashValue: Int {
-        switch self {
-        case .singleAnswer(let a):
-            return "singleAnswer".hashValue ^ a.hashValue
-        case .multipleAnswer(let a):
-            return "multipleAnswer".hashValue ^ a.hashValue
-        }
-    }
 }
