@@ -14,7 +14,7 @@ class GameTest: XCTestCase {
     var game: Game<String, String, RouterSpy>!
 
     override func setUp() {
-        game = startGame(questions: ["Q1", "Q2"], router: router, correctAnswer: ["Q1":"A1", "Q2":"A2"])
+        game = startGame(questions: ["Q1", "Q2"], router: router, correctAnswers: ["Q1":"A1", "Q2":"A2"])
     }
 
     func test_startGame_answersTwoOutOfTwoQuestionCorrectly_scoreZero() {

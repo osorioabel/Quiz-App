@@ -29,19 +29,24 @@ class iOSViewControllerFactory: ViewControllerFactory {
         return questionViewController(for: question, options: options, answerCallback: answerCallback)
     }
 
-    private func questionViewController(for question: Question<String>, options: [String], answerCallback: @escaping (([String]) -> Void)) -> UIViewController {
+    private func questionViewController(for question: Question<String>, options: [String],
+                                        answerCallback: @escaping (([String]) -> Void)) -> UIViewController {
         switch question {
         case .singleAnswer(let value):
-            return questionViewController(for: question, value: value, options: options, allowMultipleSelection: false, answerCallback: answerCallback)
+            return questionViewController(for: question, value: value, options: options, allowMultipleSelection: false,
+                                          answerCallback: answerCallback)
             
         case .multipleAnswer(let value):
-            return questionViewController(for: question, value: value, options: options, allowMultipleSelection: true, answerCallback: answerCallback)
+            return questionViewController(for: question, value: value, options: options, allowMultipleSelection: true,
+                                          answerCallback: answerCallback)
         }
     }
 
-    private func questionViewController(for question: Question<String>, value: String, options: [String], allowMultipleSelection: Bool, answerCallback: @escaping (([String]) -> Void)) -> QuestionViewController {
+    private func questionViewController(for question: Question<String>, value: String, options: [String],
+                                        allowMultipleSelection: Bool, answerCallback: @escaping (([String]) -> Void)) -> QuestionViewController {
         let presenter = QuestionPresenter(questions: questions, question: question)
-        let controller = QuestionViewController(question: value, options: options, allowMultipleSelection: allowMultipleSelection, selection: answerCallback)
+        let controller = QuestionViewController(question: value, options: options,
+                                                allowMultipleSelection: allowMultipleSelection, selection: answerCallback)
         controller.title = presenter.title
         return controller
     }
