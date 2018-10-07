@@ -14,8 +14,8 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     // MARK: - Properties
-    private var summary: String = ""
-    private var answers: [PresentableAnswer] = [PresentableAnswer]()
+    private(set) var summary: String = ""
+    private(set) var answers: [PresentableAnswer] = [PresentableAnswer]()
 
     // MARK: - Inits
     convenience init(summary: String, answers: [PresentableAnswer]) {
