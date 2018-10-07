@@ -10,19 +10,31 @@ import XCTest
 @testable import QuizEngine
 
 class QuestionTest: XCTestCase {
-    func test_hasValue_singleAnswer_returnsHashValue() {
-        let type = "A question"
-
-        let sut = Question.singleAnswer(type)
-
-        XCTAssertEqual(sut.hashValue, type.hashValue)
+    func test_hasValue_withSameWrappedValue_isDifferentForSimpleAndMultipleValue() {
+        let aValue = UUID()
+        XCTAssertNotEqual(Question.singleAnswer(aValue).hashValue,
+                          Question.multipleAnswer(aValue).hashValue)
     }
 
-    func test_hasValue_multipleAnswer_returnsHashValue() {
-        let type = "A question"
+    func test_hasValue_singleAnswer() {
+        let aValue = UUID()
+        let anotherValue = UUID()
 
-        let sut = Question.multipleAnswer(type)
+        XCTAssertEqual(Question.singleAnswer(aValue).hashValue,
+                       Question.singleAnswer(aValue).hashValue)
 
-        XCTAssertEqual(sut.hashValue, type.hashValue)
+        XCTAssertNotEqual(Question.singleAnswer(aValue).hashValue,
+                       Question.singleAnswer(anotherValue).hashValue)
+    }
+
+    func test_hasValue_multipleAnswer() {
+        let aValue = UUID()
+        let anotherValue = UUID()
+
+        XCTAssertEqual(Question.multipleAnswer(aValue).hashValue,
+                       Question.multipleAnswer(aValue).hashValue)
+
+        XCTAssertNotEqual(Question.multipleAnswer(aValue).hashValue,
+                          Question.multipleAnswer(anotherValue).hashValue)
     }
 }
