@@ -16,20 +16,25 @@ class QuestionViewController: UIViewController {
     // MARK: - Properties
     private(set) var question: String = ""
     private(set) var options: [String] = []
+    private(set) var allowMultipleSelection: Bool = false
     private var selection: (([String]) -> Void)? = nil
     private let reuseIdentifier = "Cell"
 
     // MARK: - Life cycle
-    convenience init(question: String, options: [String], selection: @escaping ([String]) -> Void) {
+    convenience init(question: String, options: [String],
+                     allowMultipleSelection: Bool,
+                     selection: @escaping ([String]) -> Void) {
         self.init()
         self.question = question
         self.options = options
+        self.allowMultipleSelection = allowMultipleSelection
         self.selection = selection
     }
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.allowsMultipleSelection = allowMultipleSelection
         headerLabel.text = question
     }
 }
