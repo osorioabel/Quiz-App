@@ -12,7 +12,7 @@ import QuizEngine
 class NavigationControllerRouter: Router {
     let navigationController: UINavigationController
     let factory: ViewControllerFactory
-    
+
     init(_ navigationController: UINavigationController, factory: ViewControllerFactory) {
         self.navigationController = navigationController
         self.factory = factory

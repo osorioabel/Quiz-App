@@ -17,7 +17,7 @@ class QuestionViewController: UIViewController {
     private(set) var question: String = ""
     private(set) var options: [String] = []
     private(set) var allowMultipleSelection: Bool = false
-    private var selection: (([String]) -> Void)? = nil
+    private var selection: (([String]) -> Void)?
     private let reuseIdentifier = "Cell"
 
     // MARK: - Life cycle

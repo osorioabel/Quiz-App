@@ -35,7 +35,7 @@ class iOSViewControllerFactory: ViewControllerFactory {
         case .singleAnswer(let value):
             return questionViewController(for: question, value: value, options: options, allowMultipleSelection: false,
                                           answerCallback: answerCallback)
-            
+
         case .multipleAnswer(let value):
             return questionViewController(for: question, value: value, options: options, allowMultipleSelection: true,
                                           answerCallback: answerCallback)

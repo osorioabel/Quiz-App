@@ -16,6 +16,6 @@ extension UITableView {
 
     func dequeueReusableCell<T>(_ type: T.Type) -> T? {
         let className = String(describing: type)
-        return dequeueReusableCell(withIdentifier:className ) as? T
+        return dequeueReusableCell(withIdentifier: className ) as? T
     }
 }

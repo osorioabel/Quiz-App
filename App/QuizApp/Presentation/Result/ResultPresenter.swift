@@ -9,7 +9,7 @@
 import QuizEngine
 
 struct ResultPresenter {
-    let result: Result<Question<String>,[String]>
+    let result: Result<Question<String>, [String]>
     let questions: [Question<String>]
     let correctAnswers: Dictionary<Question<String>, [String]>
 
@@ -42,7 +42,7 @@ struct ResultPresenter {
     }
 
     private func formattedWrongAnswer(_ userAnswer: [String], _ correctAnswer: [String]) -> String? {
-        return correctAnswer == userAnswer ? nil : formattedAnswer(userAnswer) 
+        return correctAnswer == userAnswer ? nil : formattedAnswer(userAnswer)
     }
 
     private func formattedAnswer(_ answer: [String]) -> String {
